@@ -195,10 +195,32 @@ switch (Weeks) {
 // Exercise 11: Working with Strings
 // Create a string and use string methods to change its case (upper/lowercase),
 // find its length, and log the results.
+function forsString(str){
+let changer = str.toLowerCase();
+let changer2 = str.toUpperCase();
+let lenghter = str.length
+
+return [changer, changer2, lenghter]
+}
+
+const resulter = forsString('PACMAN')
+console.log(resulter)
 
 // Exercise 12: More Functions
 // Write a function that takes a string as input and returns the reverse
 // of the string. Call the function and log the result.
+
+function reverser(str){
+    let reverse = '';
+    for(let i = str.length -1; i > 0; i--){
+        reverse += str[i]
+    }return reverse;
+}
+
+const stinger = 'Word';
+const resutl = reverser(stinger);
+console.log(resutl);
+
 
 // Exercise 13: Objects and Methods
 // Create an object representing a car with properties like make, model,
