@@ -306,21 +306,25 @@ function simulateAsyncOperation() {
       console.error("Error:", error);
     });
 
-    // let p = new Promise((Good, Bad) => {
-    //     let nr = 10 + 10;
-    
-    //     if(nr == 20){
-    //         Good = ('Succcess')
-    //     }else{
-    //         Bad = ('ERROR')
+
+    // let p = new Promise((resolve, reject) => {
+    //     let nr = 10 + 20;
+      
+    //     if (nr === 20) {
+    //       resolve('Success');
+    //     } else {
+    //       reject('ERROR');
     //     }
-    // })
+    //   });
+      
+    //   p.then((response) => {
+    //     console.log('Response 1: ' + response);
+    //   }).catch((error) => {
+    //     console.error('Response 2: ' + error);
+    //   });
+      
+
     
-    // p.catch((responsee)=>{
-    //     console.log('response1' + responsee)
-    // }).catch((responsee)=>{
-    //     console.log('response2' + responsee)
-    // })
       
   
 
