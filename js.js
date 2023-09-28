@@ -227,17 +227,102 @@ console.log(resutl);
 // and year. Add a method to the object that calculates the age of the car
 // based on the current year.
 
+let carobj = { 
+    make: 'Dacia', 
+    model: 'Logan',
+    year: 2007, 
+    
+    dater : function(){
+        let nwedate = new Date().getFullYear();
+        let apply = nwedate - this.year;
+        return apply
+    }
+};
+const all = carobj.dater();
+console.log(`This car is ${all} yaer old`)
+
+
+
+
+
+
 // Exercise 14: Arrays and Filtering
 // Create an array of numbers and use array methods to filter out even numbers.
 // Log the resulting array.
+
+const arrnr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const filterEvenNumbers = arr => arr.filter(num => num % 2 === 0);
+
+const resultss = filterEvenNumbers(arrnr);
+console.log(resultss);
+
+
+
 
 // Exercise 15: Handling Errors
 // Write a function that takes two numbers as input and divides them.
 // Handle the case where the denominator is zero by logging an error message.
 
+
+function numbersz(a,b){
+    if(a === 0){
+        return undefined;
+    }else{
+        return a / b
+    }
+}
+
+const result1 = numbersz(60,30);
+console.log('Rezultat1:', result1)
+
+const result2 = numbersz(0, 9);
+console.log('Rezultat2:', result2)
+
 // Exercise 16: Promises
 // Create a promise that simulates an asynchronous operation (e.g., fetching data).
 // Handle the promise using `.then()` and `.catch()` to log success or error.
+
+// Create a function that returns a promise simulating an asynchronous operation
+
+function simulateAsyncOperation() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const randomNum = Math.random();
+        if (randomNum >= 0.5) {
+          resolve("Data fetched successfully!");
+        } else {
+          reject("Error: Failed to fetch data.");
+        }
+      }, 1000); 
+    });
+  }
+  
+  simulateAsyncOperation()
+    .then((result) => {
+      console.log("Success:", result);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+
+    // let p = new Promise((Good, Bad) => {
+    //     let nr = 10 + 10;
+    
+    //     if(nr == 20){
+    //         Good = ('Succcess')
+    //     }else{
+    //         Bad = ('ERROR')
+    //     }
+    // })
+    
+    // p.catch((responsee)=>{
+    //     console.log('response1' + responsee)
+    // }).catch((responsee)=>{
+    //     console.log('response2' + responsee)
+    // })
+      
+  
 
 // Exercise 17: DOM Manipulation
 // Create an HTML document with a button. Write JavaScript code to add a click
