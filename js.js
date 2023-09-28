@@ -338,8 +338,24 @@ function simulateAsyncOperation() {
     })
 
 // Exercise 18: Event Handling
-// Create an HTML form with input fields. Write JavaScript code to handle
+// Create an HTML form with input fields. Write JavaScript code to handle   
 // form submission and log the form data when submitted.
+
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    // Get form data
+    const formData = new FormData(event.target);
+
+    // Create an object to store form data
+    const formDataObject = {};
+    formData.forEach((value, key) => {
+        formDataObject[key] = value;
+    });
+
+    // Log the form data
+    console.log(formDataObject);
+});
 
 // Exercise 19: Local Storage
 // Use the Local Storage API to store and retrieve data in the browser.
