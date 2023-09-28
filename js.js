@@ -332,6 +332,11 @@ function simulateAsyncOperation() {
 // Create an HTML document with a button. Write JavaScript code to add a click
 // event listener to the button and log a message when it's clicked.
 
+    const bt = document.querySelector('button');
+    bt.addEventListener('click', ()=>{
+        !alert('Welcome')
+    })
+
 // Exercise 18: Event Handling
 // Create an HTML form with input fields. Write JavaScript code to handle
 // form submission and log the form data when submitted.
