@@ -361,6 +361,57 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
 // Use the Local Storage API to store and retrieve data in the browser.
 // Create functions to save and retrieve user preferences.
 
+// Function to save user preferences to Local Storage
+function saveUserPreferences(key, value) {
+  // Check if Local Storage is supported by the browser
+  if (typeof Storage !== "undefined") {
+    // Convert the value to JSON and store it in Local Storage
+    localStorage.setItem(key, JSON.stringify(value));
+    console.log(`User preference for ${key} saved successfully.`);
+  } else {
+    console.log("Local Storage is not supported by this browser.");
+  }
+}
+
+// Function to retrieve user preferences from Local Storage
+function getUserPreferences(key) {
+  // Check if Local Storage is supported by the browser
+  if (typeof Storage !== "undefined") {
+    // Retrieve the value from Local Storage and parse it as JSON
+    const value = localStorage.getItem(key);
+    
+    // Check if the value exists
+    if (value !== null) {
+      return JSON.parse(value);
+    } else {
+      console.log(`No user preference found for ${key}.`);
+      return null;
+    }
+  } else {
+    console.log("Local Storage is not supported by this browser.");
+    return null;
+  }
+}
+
+// Example usage:
+const user = {
+  name: "John",
+  email: "john@example.com",
+  theme: "dark",
+};
+
+// Save user preferences
+saveUserPreferences("user", user);
+
+// Retrieve user preferences
+const savedUser = getUserPreferences("user");
+if (savedUser) {
+  console.log("User Name:", savedUser.name);
+  console.log("User Email:", savedUser.email);
+  console.log("User Theme:", savedUser.theme);
+}
+
+
 // Exercise 20: AJAX and API Calls
 // Make an AJAX request to fetch data from a public API (e.g., JSONPlaceholder).
 // Parse the response and log it to the console.
