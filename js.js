@@ -359,13 +359,11 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
 
 // Exercise 19: Local Storage
 // Use the Local Storage API to store and retrieve data in the browser.
-// Create functions to save and retrieve user preferences.
+// Create functions to save and retrieve user preferences. ---------------------------------------------INVATA LOCAL STORAGE SI AJAX
 
-// Function to save user preferences to Local Storage
 function saveUserPreferences(key, value) {
-  // Check if Local Storage is supported by the browser
+
   if (typeof Storage !== "undefined") {
-    // Convert the value to JSON and store it in Local Storage
     localStorage.setItem(key, JSON.stringify(value));
     console.log(`User preference for ${key} saved successfully.`);
   } else {
@@ -373,14 +371,13 @@ function saveUserPreferences(key, value) {
   }
 }
 
-// Function to retrieve user preferences from Local Storage
+
 function getUserPreferences(key) {
-  // Check if Local Storage is supported by the browser
+
   if (typeof Storage !== "undefined") {
-    // Retrieve the value from Local Storage and parse it as JSON
+
     const value = localStorage.getItem(key);
     
-    // Check if the value exists
     if (value !== null) {
       return JSON.parse(value);
     } else {
@@ -393,17 +390,17 @@ function getUserPreferences(key) {
   }
 }
 
-// Example usage:
+
 const user = {
   name: "John",
   email: "john@example.com",
   theme: "dark",
 };
 
-// Save user preferences
+
 saveUserPreferences("user", user);
 
-// Retrieve user preferences
+
 const savedUser = getUserPreferences("user");
 if (savedUser) {
   console.log("User Name:", savedUser.name);
@@ -415,6 +412,40 @@ if (savedUser) {
 // Exercise 20: AJAX and API Calls
 // Make an AJAX request to fetch data from a public API (e.g., JSONPlaceholder).
 // Parse the response and log it to the console.
+
+
+// Function to make an AJAX request
+function makeAjaxRequest(url, callback) {
+    const xhr = new XMLHttpRequest();
+  
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          // Parse the JSON response
+          const response = JSON.parse(xhr.responseText);
+          callback(null, response);
+        } else {
+          callback(`Error: ${xhr.status} - ${xhr.statusText}`, null);
+        }
+      }
+    };
+  
+    xhr.open("GET", url, true);
+    xhr.send();
+  }
+  
+  // Example usage: Fetch data from JSONPlaceholder API
+  const apiUrl = "https://jsonplaceholder.typicode.com/posts/1"; // Replace with the API endpoint you want to use
+  
+  makeAjaxRequest(apiUrl, function (error, data) {
+    if (error) {
+      console.error("Error:", error);
+    } else {
+      console.log("Response:", data);
+      // You can work with the data here
+    }
+  });
+  
 
 // Feel free to start with any of these exercises and work your way through them.
 // Good luck with your JavaScript learning journey!
