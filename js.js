@@ -290,7 +290,7 @@ function simulateAsyncOperation() {
       setTimeout(() => {
         const randomNum = Math.random();
         if (randomNum >= 0.5) {
-          resolve("Data fetched successfully!");
+          resolve("Data fetched successfullssssy!");
         } else {
           reject("Error: Failed to fetch data.");
         }
@@ -416,35 +416,36 @@ if (savedUser) {
 
 // Function to make an AJAX request
 function makeAjaxRequest(url, callback) {
-    const xhr = new XMLHttpRequest();
-  
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          // Parse the JSON response
-          const response = JSON.parse(xhr.responseText);
-          callback(null, response);
-        } else {
-          callback(`Error: ${xhr.status} - ${xhr.statusText}`, null);
-        }
+  const xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        // Parse the JSON response
+        const response = JSON.parse(xhr.responseText);
+        callback(null, response);
+      } else {
+        callback(`Error: ${xhr.status} - ${xhr.statusText}`, null);
       }
-    };
-  
-    xhr.open("GET", url, true);
-    xhr.send();
-  }
-  
-  // Example usage: Fetch data from JSONPlaceholder API
-  const apiUrl = "https://jsonplaceholder.typicode.com/posts/1"; // Replace with the API endpoint you want to use
-  
-  makeAjaxRequest(apiUrl, function (error, data) {
-    if (error) {
-      console.error("Error:", error);
-    } else {
-      console.log("Response:", data);
-      // You can work with the data here
     }
-  });
+  };
+
+  xhr.open("GET", url, true);
+  xhr.send();
+}
+
+// Example usage: Fetch data from a JSON API
+const apiUrl = "https://jsonplaceholder.typicode.com/posts/1"; // Replace with the API endpoint you want to use
+
+makeAjaxRequest(apiUrl, function (error, data) {
+  if (error) {
+    console.error("Error:", error);
+  } else {
+    console.log("Response:", data);
+    // You can work with the data here
+  }
+});
+
   
 
 // Feel free to start with any of these exercises and work your way through them.
