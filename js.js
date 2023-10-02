@@ -290,7 +290,7 @@ function simulateAsyncOperation() {
       setTimeout(() => {
         const randomNum = Math.random();
         if (randomNum >= 0.5) {
-          resolve("Data fetched successfullssssy!");
+          resolve("Data fetched successfully!");
         } else {
           reject("Error: Failed to fetch data.");
         }
