@@ -10,7 +10,7 @@ function numeros(a,b){
     return a + b
 }
 
-const rez = numeros(12,202);
+const rez = numeros(12,20);
 console.log(rez);
 // Exercițiul 4: Utilizați structura de control IF
 const jhon = 24
