@@ -17,7 +17,7 @@ const jhon = 24
 const max = 23
 
 if(jhon > max){
-    console.log('Jhon is bigger')
+    console.log('Jhon is biggerr')
 }else{
     console.log('max is bigger')
 }
