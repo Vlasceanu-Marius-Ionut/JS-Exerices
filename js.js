@@ -447,7 +447,53 @@ makeAjaxRequest(apiUrl, function (error, data) {
 });
 
   
+const socket = new WebSocket('ws://127.0.0.1:5501/ws');
+
+socket.onopen = function (event) {
+  console.log('WebSocket connection opened:', event);
+};
+
+socket.onmessage = function (event) {
+  console.log('Received message:', event.data);
+};
+
+socket.onclose = function (event) {
+  console.log('WebSocket connection closed:', event);
+};
 
 // Feel free to start with any of these exercises and work your way through them.
 // Good luck with your JavaScript learning journey!
 //-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Exercise 1: Reverse a String
+
+function reversrr(e){
+
+  let reversing =[]
+
+  for (let i = e.length; i >= 0; i--) {
+    reversing.push(e[i]);
+  }
+}
+
+const resulterrr = reversrr([1,2,3,4,5,6])
+console.log(resulterrr)
+
+// Exercise 2: Factorial Calculator
+
+// Exercise 3: Palindrome Checker
+
+// Exercise 4: Fibonacci Sequence
+
+// Exercise 5: Find the Longest Word
+
+// Exercise 6: FizzBuzz
+
+// Exercise 7: Array Manipulation
+
+// Exercise 8: Find Prime Numbers
+
+// Exercise 9: Anagram Checker
+
+// Exercise 10: Object Manipulation
