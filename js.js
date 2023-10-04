@@ -385,7 +385,7 @@ function getUserPreferences(key) {
       return null;
     }
   } else {
-    console.log("Local Storage is not supported by this browser.");
+    console.log("Local Storage is not supportedd by this browser.");
     return null;
   }
 }
