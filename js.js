@@ -484,6 +484,19 @@ console.log(fz); // Output: 'POM'
 
 // Exercise 2: Factorial Calculator
 
+function factorial(n) {
+  if (n <= 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+// Test the factorial function
+const number = 5; // Change this number to calculate the factorial of a different number
+const result = factorial(number);
+console.log(`The factorial of ${number} is ${result}`);
+
+
 // Exercise 3: Palindrome Checker
 
 // Exercise 4: Fibonacci Sequence
