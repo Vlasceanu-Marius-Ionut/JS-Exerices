@@ -446,21 +446,6 @@ makeAjaxRequest(apiUrl, function (error, data) {
   }
 });
 
-  
-const socket = new WebSocket('ws://127.0.0.1:5501/ws');
-
-socket.onopen = function (event) {
-  console.log('WebSocket connection opened:', event);
-};
-
-socket.onmessage = function (event) {
-  console.log('Received message:', event.data);
-};
-
-socket.onclose = function (event) {
-  console.log('WebSocket connection closed:', event);
-};
-
 // Feel free to start with any of these exercises and work your way through them.
 // Good luck with your JavaScript learning journey!
 //-----------------------------------------------------------------------------------------------------------------------------------------
@@ -468,17 +453,34 @@ socket.onclose = function (event) {
 
 // Exercise 1: Reverse a String
 
-function reversrr(e){
+// Function to reverse a string
+function reversrrr(e) {
+  let z = '';
 
-  let reversing =[]
-
-  for (let i = e.length; i >= 0; i--) {
-    reversing.push(e[i]);
+  for (let i = e.length - 1; i >= 0; i--) {
+    z += e[i];
   }
+
+  return z;
 }
 
-const resulterrr = reversrr([1,2,3,4,5,6])
-console.log(resulterrr)
+const resulterrr = reversrrr('Jirrr');
+console.log(resulterrr); // Output: 'rrriJ'
+
+// Function to reverse another string
+function rev2(m) {
+  let s = '';
+
+  for (let i = m.length - 1; i >= 0; i--) {
+    s += m[i];
+  }
+
+  return s;
+}
+
+const fz = rev2('MOP');
+console.log(fz); // Output: 'POM'
+
 
 // Exercise 2: Factorial Calculator
 
