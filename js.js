@@ -598,3 +598,49 @@ function pirsz(height) {
 
 const piramidaInaltime = 5;
 pirsz(piramidaInaltime);
+
+
+const mas = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let i = mas.length; i > -1; i--) {
+
+  console.log(mas[i]);
+}
+
+//-------------------------------------------------
+const doss = ['ramon', 'maon', 'jbeng']
+const results = doss.map((item) =>{
+  return item.toLocaleUpperCase(); 
+})
+
+console.log(results)
+
+
+//arrow
+//simpletipcalc
+
+const totalCost = 305;
+const tip = totalCost >= 300 && totalCost < 50 ? totalCost * 0.15 : totalCost * 0.20;
+
+const rzzz = `Your cost is $${totalCost}, your tip is $${tip}, and total total cost is $${totalCost + tip}`;
+console.log(rzzz);
+//-----------------------------------------------------
+
+function verificarePare(nr){
+  if(typeof nr !== 'number'){
+    return "Va rugam sa introduceti un numar valid";
+  }
+
+  if(nr % 2 === 0){
+    return `Numarul ${nr} este par`
+  }else{
+    return `Numarul ${nr} este impar`
+  }
+}
+
+console.log(verificarePare(4));
+console.log(verificarePare(5));
+console.log(verificarePare(8));
+
+//----------------------------------------------------
+
