@@ -499,6 +499,18 @@ console.log(`The factorial of ${number} is ${result}`);
 
 // Exercise 3: Palindrome Checker
 
+function palindroms(str) {
+  str = str.toLowerCase().replace(/ /g, '');
+  
+  return str === str.split('').reverse().join('');
+}
+console.log(palindroms('Mustafa'))
+console.log(palindroms('War is ending'))
+console.log(palindroms("racecar")); 
+console.log(palindroms("A man a plan a canal Panama")); 
+console.log(palindroms("hello")); 
+console.log(palindroms('HHH'))
+
 // Exercise 4: Fibonacci Sequence
 
 // Exercise 5: Find the Longest Word
