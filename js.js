@@ -512,3 +512,42 @@ console.log(`The factorial of ${number} is ${result}`);
 // Exercise 9: Anagram Checker
 
 // Exercise 10: Object Manipulation
+
+
+function createPyramid(height) {
+  for (let i = 1; i <= height; i++) {
+    let row = '';
+
+    for (let j = 1; j <= height - i; j++) {
+      row += ' ';
+    }
+
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      row += '*';
+    }
+
+    console.log(row);
+  }
+}
+const pyramidHeight = 5;
+createPyramid(pyramidHeight);
+
+
+function creatingAPyramid(pir){
+  for(let i = 1; i <= pir; i++){
+
+    let ig = ''
+
+    for(let j = 0; j <= pir -1; j++){
+      ig += '*'
+      
+    }
+    for(let k = 0; k <= 2 * i -1; k++){
+      ig += ''
+    }
+    console.log(ig)
+  }
+}
+
+const resulttt = 10;
+createPyramid(resulttt)
