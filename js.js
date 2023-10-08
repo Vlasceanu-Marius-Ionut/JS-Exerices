@@ -537,11 +537,11 @@ function creatingAPyramid(pir){
   for(let i = 1; i <= pir; i++){
 
     let ig = ''
-
+//before stars
     for(let j = 0; j <= pir -1; j++){
       ig += '*'
       
-    }
+    }//stars
     for(let k = 0; k <= 2 * i -1; k++){
       ig += ''
     }
@@ -551,3 +551,38 @@ function creatingAPyramid(pir){
 
 const resulttt = 10;
 createPyramid(resulttt)
+
+
+
+function thirdPyr(pirs) {
+  for (let i = 1; i <= pirs; i++) {
+    let str = '';
+    for (let j = 0; j < pirs - i; j++) {
+      str += ' ';
+    }
+    for (let k = 0; k < 2 * i - 1; k++) {
+      str += '*';
+    }
+    console.log(str);
+  }
+}
+
+const nrmbstsofpir = 5;
+thirdPyr(nrmbstsofpir);
+
+function createPyramid(height) {
+  for (let i = 1; i <= height; i++) {
+    let row = '';
+    for (let j = 1; j <= height - i; j++) {
+      row += ' ';
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      row += '*';
+    }
+
+    console.log(row);
+  }
+}
+
+const piramidaInaltime = 5;
+createPyramid(piramidaInaltime);
