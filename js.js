@@ -642,5 +642,12 @@ console.log(verificarePare(4));
 console.log(verificarePare(5));
 console.log(verificarePare(8));
 
+
+let lister = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+let rzx = lister.map((e)=>{
+  return verificarePare(e);
+})
+console.log(rzx)
 //----------------------------------------------------
+
 
