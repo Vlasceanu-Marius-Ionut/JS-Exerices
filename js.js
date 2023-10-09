@@ -634,7 +634,7 @@ function verificarePare(nr){
   if(nr % 2 === 0){
     return `Numarul ${nr} este par`
   }else{
-    return `Numarul ${nr} este impar`
+    return `Numarul ${nr} este impare`
   }
 }
 
