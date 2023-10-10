@@ -649,5 +649,6 @@ let rzx = lister.map((e)=>{
 })
 console.log(rzx)
 //----------------------------------------------------
-
+const gos = 50
+console.log(gos + 40)//testForNewExtension
 
