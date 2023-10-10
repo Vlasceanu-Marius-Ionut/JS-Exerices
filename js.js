@@ -481,19 +481,121 @@ console.log(palindroms("hello"));
 console.log(palindroms("HHH"));
 
 // Exercise 4: Fibonacci Sequence
+function generateFibonacci(n) {
+  const sequence = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    const next = sequence[i - 1] + sequence[i - 2];
+    if (next <= n) {
+      sequence.push(next);
+    } else {
+      break;
+    }
+  }
+  return sequence;
+}
+
+const n = 50;
+const fibonacciSequence = generateFibonacci(n);
+console.log(fibonacciSequence);
 
 // Exercise 5: Find the Longest Word
+function findLongestWord(words) {
+  let longestWord = "";
+  for (const word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+
+const words = ["apple", "banana", "cherry", "date", "elderberry"];
+const longest = findLongestWord(words);
+console.log("The longest word is:", longest);
 
 // Exercise 6: FizzBuzz
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
 
 // Exercise 7: Array Manipulation
 
 // Exercise 8: Find Prime Numbers
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+
+  if (num % 2 === 0 || num % 3 === 0) return false;
+
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) return false;
+  }
+
+  return true;
+}
+
+function findPrimesInRange(start, end) {
+  const primes = [];
+  for (let i = start; i <= end; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+  return primes;
+}
+
+const primeNumbers = findPrimesInRange(1, 50); // Change the range as needed
+console.log("Prime numbers:", primeNumbers);
 
 // Exercise 9: Anagram Checker
+function areAnagrams(str1, str2) {
+  const cleanStr1 = str1.replace(/[^\w]/g, "").toLowerCase();
+  const cleanStr2 = str2.replace(/[^\w]/g, "").toLowerCase();
+
+  if (cleanStr1.length !== cleanStr2.length) {
+    return false;
+  }
+
+  const sortedStr1 = cleanStr1.split("").sort().join("");
+  const sortedStr2 = cleanStr2.split("").sort().join("");
+
+  return sortedStr1 === sortedStr2;
+}
+
+const word1 = "listen";
+const word2 = "silent";
+const areTheyAnagrams = areAnagrams(word1, word2);
+console.log("Are they anagrams?", areTheyAnagrams);
 
 // Exercise 10: Object Manipulation
+// Example object
+const persons = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
 
+persons.email = "john.doe@example.com";
+
+persons.age = 31;
+
+delete persons.email;
+
+for (const key in persons) {
+  if (person.hasOwnProperty(key)) {
+    console.log(`${key}: ${person[key]}`);
+  }
+}
+
+////////////////////////////////////////////////
 function createPyramid(height) {
   for (let i = 1; i <= height; i++) {
     let row = "";
