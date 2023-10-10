@@ -462,7 +462,7 @@ function factorial(n) {
 }
 
 // Test the factorial function
-const number = 5; // Change this number to calculate the factorial of a different number
+const number = 5;
 const result = factorial(number);
 console.log(`The factorial of ${number} is ${result}`);
 
@@ -482,51 +482,66 @@ console.log(palindroms("HHH"));
 
 // Exercise 4: Fibonacci Sequence
 function generateFibonacci(n) {
-  const sequence = [0, 1];
-  for (let i = 2; i <= n; i++) {
-    const next = sequence[i - 1] + sequence[i - 2];
-    if (next <= n) {
-      sequence.push(next);
-    } else {
-      break;
-    }
+  const scx = [0, 1];
+  for (let i = 2; i < n; i++) {
+    scx[i] = scx[i - 1] + scx[i - 2];
   }
-  return sequence;
+  return scx;
 }
 
-const n = 50;
-const fibonacciSequence = generateFibonacci(n);
-console.log(fibonacciSequence);
+console.log(generateFibonacci(2));
+console.log(generateFibonacci(3));
+console.log(generateFibonacci(4));
+console.log(generateFibonacci(5));
+console.log(generateFibonacci(6));
+console.log(generateFibonacci(7));
 
 // Exercise 5: Find the Longest Word
-function findLongestWord(words) {
-  let longestWord = "";
-  for (const word of words) {
-    if (word.length > longestWord.length) {
-      longestWord = word;
+function findTheLongestWord(wordsArray) {
+  let longest = "";
+
+  for (let word of wordsArray) {
+    if (word.length > longest.length) {
+      longest = word;
     }
   }
-  return longestWord;
+
+  return longest;
 }
 
-const words = ["apple", "banana", "cherry", "date", "elderberry"];
-const longest = findLongestWord(words);
-console.log("The longest word is:", longest);
+const wordsArray = ["apple", "banana", "cherry", "date", "elderberry"];
+
+const longestWord = findTheLongestWord(wordsArray);
+console.log("The longest word is:", longestWord);
 
 // Exercise 6: FizzBuzz
-for (let i = 1; i <= 100; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    console.log("FizzBuzz");
-  } else if (i % 3 === 0) {
-    console.log("Fizz");
-  } else if (i % 5 === 0) {
-    console.log("Buzz");
-  } else {
-    console.log(i);
+
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
   }
 }
 
+fizzBuzz(15);
+
 // Exercise 7: Array Manipulation
+function arrayMan(arr) {
+  let rzc = arr.map((e) => e * 2);
+  arr.length = 0;
+  return rzc;
+}
+
+let arrizz = [1, 2, 3, 4, 5, 6, 7];
+let zzc = arrayMan(arrizz);
+console.log(zzc);
 
 // Exercise 8: Find Prime Numbers
 function isPrime(num) {
