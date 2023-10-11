@@ -764,3 +764,7 @@ function itr(e) {
 
 const nnnn = itr(cars);
 console.log(nnnn);
+
+for (let i = 0; i < 50; i++) {
+  console.log([i]);
+}
