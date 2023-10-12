@@ -798,5 +798,5 @@ function golf(strokes, par) {
     return "Go Home!";
   }
 }
-let golfer = golf(4, 3);
+let golfer = golf(5, 5);
 console.log(golfer);
