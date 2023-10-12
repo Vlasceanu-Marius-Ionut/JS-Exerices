@@ -758,13 +758,23 @@ console.log(rezsx);
 
 function itr(e) {
   for (let i = 0; i <= e.length; i++) {
-    console.log(e[i]);
+    console.table(e[i]);
   }
 }
 
 const nnnn = itr(cars);
-console.log(nnnn);
+console.table(nnnn);
 
 for (let i = 0; i < 50; i++) {
   console.log([i]);
 }
+
+const rrqe = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const mnm = rrqe.map((i) => {
+  if (i % 2 == 0) {
+    return "odd";
+  } else {
+    return "even";
+  }
+});
+console.log(mnm);
