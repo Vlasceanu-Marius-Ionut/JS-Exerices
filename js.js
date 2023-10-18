@@ -865,3 +865,50 @@ function isMuchBetter(...decrementagain) {
 
 let nm = isMuchBetter(1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12);
 console.log(nm);
+
+//check if number  = odd
+
+function odder(a) {
+  let res = [];
+
+  for (let i = 0; i < a.length; i++) {
+    if ([i] % 2 == 0) {
+      res.push("Even");
+    } else {
+      res.push("Odd");
+    }
+  }
+  return res;
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let rszz = odder(arr);
+console.log(rszz);
+
+function odder(a) {
+  return a.map((index) => (index % 2 === 0 ? "even" : "odd"));
+}
+
+let arrz = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let rszzz = odder(arrz);
+console.log(rszzz);
+
+//------------------------------------------------------------------
+
+function notherodder(b) {
+  return b.map((n) => (n % 2 === 0 ? "even" : "odd"));
+}
+
+let arrr = [
+  24, 21, 43, 25, 25, 46, 5, 46, 34, 523, 432, 34, 1, 4, 25, 436, 54, 75, 245,
+  33, 22, 44, 66,
+];
+let skzsxd = notherodder(arrr);
+console.log(skzsxd);
+
+arrr.forEach((element) => console.log(typeof element));
+arrr.forEach((nr, index) => {
+  arrr[index] = `${nr} (${typeof nr})`;
+});
+
+console.log(arrr);
