@@ -912,3 +912,72 @@ arrr.forEach((nr, index) => {
 });
 
 console.log(arrr);
+
+// Iterarea printr-un șir de numere:
+
+// Creați un șir de numere de la 1 la 10 și utilizați o buclă for pentru a le parcurge și a le afișa în consolă.
+// Suma elementelor dintr-un șir:
+function loop(...args) {
+  for (let i = 0; i < args.length; i++) {
+    console.log(args[i]);
+  }
+}
+
+let shir = loop(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+// Creați un șir de numere și utilizați o buclă for pentru a calcula suma tuturor elementelor din șir.
+// Filtrarea elementelor dintr-un șir:
+function calculateSum(...n) {
+  let sum = 0;
+
+  for (let i = 0; i < n.length; i++) {
+    sum += n[i];
+  }
+
+  return sum;
+}
+
+let numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50];
+let totalSum = calculateSum(...numberss);
+console.log(totalSum);
+
+// Creați un șir de numere și utilizați o buclă for pentru a filtra toate numerele pare într-un alt șir.
+// Găsirea celui mai mare element:
+
+function prz(...n) {
+  let j = [];
+
+  for (let i = 0; i < n.length; i++) {
+    if (i % 2 == 0) {
+      j.push("Even");
+    } else {
+      j.push("Odd");
+    }
+  }
+
+  return j;
+}
+
+let z = prz(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(z);
+
+// Creați un șir de numere și utilizați o buclă for pentru a găsi cel mai mare număr din șir.
+// Iterarea prin proprietățile unui obiect:
+
+// Creați un obiect cu mai multe proprietăți și utilizați o buclă for...in pentru a parcurge proprietățile și a le afișa în consolă.
+// Iterarea prin elementele unui șir folosind forEach:
+
+// Creați un șir de cuvinte și utilizați metoda forEach pentru a parcurge elementele și a le afișa în consolă.
+// Folosirea map pentru a modifica un șir:
+
+// Creați un șir de numere și utilizați metoda map pentru a crea un nou șir în care fiecare număr este dublat.
+// Iterarea cu ajutorul while loop:
+
+// Folosiți un while loop pentru a număra în ordine inversă de la 10 la 1 și a afișa numerele în consolă.
+// Iterarea prin șiruri multidimensionale:
+
+// Creați o matrice (un șir de șiruri) și utilizați bucle pentru a parcurge toate elementele din matrice.
+// Iterarea recursivă:
+
+// Creați o funcție recursivă care parcurge o structură de date în formă de arbore și afișează fiecare nod.
+// Aceste exerciții acoperă diverse aspecte ale iterațiilor în JavaScript și te vor ajuta să dobândești experiență practică în utilizarea buclelor for, while, forEach, precum și a metodelor de șiruri precum map și filter.
