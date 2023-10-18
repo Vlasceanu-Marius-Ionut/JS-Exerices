@@ -800,3 +800,68 @@ function golf(strokes, par) {
 }
 let golfer = golf(6, 3);
 console.log(golfer);
+
+function justFor(...args) {
+  let arr = [];
+
+  for (let i = 0; i < args.length; i++) {
+    arr.push(args[i]);
+  }
+
+  return arr;
+}
+
+let mosroroew = justFor(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(mosroroew);
+//--------------------------------------------------------
+
+function newWer(...args) {
+  let arr = [];
+
+  for (let i = args.length - 1; i >= 0; i--) {
+    arr.push(args[i]);
+  }
+
+  return arr;
+}
+
+let kkkz = newWer(1, 2, 3, 4, 5, 6, 7, 8, 10);
+console.log(kkkz);
+
+//------------------------------------------------------------
+
+function again(...b) {
+  let arr = [];
+
+  for (let i = b.length - 1; i >= 0; i--) {
+    arr.push(b[i]);
+  }
+  return arr;
+}
+let nnmm = again(1, 2, 3, 4, 5, 6, 7, 8, 10);
+console.log(nnmm);
+
+function keepLeanringYouSlowBrain(...m) {
+  let z = [];
+
+  for (let i = m.length - 1; i >= 0; i--) {
+    z.push(m[i]);
+  }
+  return z;
+}
+
+let nmvbn = keepLeanringYouSlowBrain(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+console.log(nmvbn);
+//-p-------------------------------------------------------------------------
+
+function isMuchBetter(...decrementagain) {
+  let n = [];
+
+  for (let i = decrementagain.length - 1; i >= 0; i--) {
+    n.push(decrementagain[i]);
+  }
+  return n;
+}
+
+let nm = isMuchBetter(1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12);
+console.log(nm);
