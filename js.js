@@ -325,16 +325,13 @@ bt.addEventListener("click", () => {
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // Get form data
   const formData = new FormData(event.target);
 
-  // Create an object to store form data
   const formDataObject = {};
   formData.forEach((value, key) => {
     formDataObject[key] = value;
   });
 
-  // Log the form data
   console.log(formDataObject);
 });
 
@@ -981,3 +978,21 @@ console.log(z);
 
 // Creați o funcție recursivă care parcurge o structură de date în formă de arbore și afișează fiecare nod.
 // Aceste exerciții acoperă diverse aspecte ale iterațiilor în JavaScript și te vor ajuta să dobândești experiență practică în utilizarea buclelor for, while, forEach, precum și a metodelor de șiruri precum map și filter.
+
+function poperr(l) {
+  let k = [];
+  for (let i = 0; i < l.length; i++) {
+    k.push(l[i]);
+  }
+  return k;
+}
+
+const fruitss = poperr(["Apple", "Banana", "Watermelon", "Orange"]);
+const index = prompt("Introdu un index pentru a selecta un fruct:");
+
+if (index >= 0 && index < fruitss.length) {
+  const chosenFruit = fruitss[index];
+  alert(`Ai ales: ${chosenFruit}`);
+} else {
+  alert("Indexul introdus nu este valid.");
+}
